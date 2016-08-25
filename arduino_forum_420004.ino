@@ -1,6 +1,7 @@
 #include <Adafruit_NeoPixel.h>
 
 const int NUMPIXELS = 24;
+const int TAIL_LENGTH = NUMPIXELS/2;
 const uint32_t CYCLE_MS = 1000;
 const float COLOR_R = 0;
 const float COLOR_G = 0;
@@ -30,8 +31,8 @@ void loop() {
 
   pixels.clear();
 
-  for (int i = 0; i < NUMPIXELS / 2; i++) {
-    float bright = (i / (float)NUMPIXELS);
+  for (int i = 0; i < TAIL_LENGTH; i++) {
+    float bright = (i / (float)TAIL_LENGTH);
 
     // uncomment this for a more abrupt fall-off
     // this in effect does a gamma of .5
