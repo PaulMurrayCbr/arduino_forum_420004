@@ -38,7 +38,7 @@ void loop() {
     // this in effect does a gamma of .5
     bright *= bright;
 
-    float ppos = (NUMPIXELS * 2 - pos - i) % NUMPIXELS;
+    int ppos = (NUMPIXELS * 2 - pos - i) % NUMPIXELS;
     uint32_t color = pixels.Color(
                        COLOR_R * bright,
                        COLOR_G * bright,
